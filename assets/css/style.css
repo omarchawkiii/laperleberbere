@@ -1,0 +1,740 @@
+/* ============================================
+   LA PERLE BERBÈRE - Styles personnalisés
+   ============================================ */
+
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #6911FA;
+    --accent-dark: #6911FA;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --light-bg: #f8f9fa;
+    --border-radius: 10px;
+}
+
+/* =========================
+   Styles globaux
+   ========================= */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #2c3e50;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* =========================
+   Navbar
+   ========================= */
+
+.navbar {
+    background-color: var(--accent-color) !important;
+    box-shadow: 0 2px 8px #6911FA;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+.navbar-brand img {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+    transition: opacity 0.2s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+.nav-link.active {
+    font-weight: 700;
+    border-bottom: 2px solid white;
+}
+
+/* =========================
+   Cartes (Cards)
+   ========================= */
+
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+    padding: 1rem 1.25rem;
+    font-weight: 600;
+    border-bottom: none;
+}
+
+.card-header.bg-primary,
+.card-header.bg-accent {
+    background-color: var(--accent-color) !important;
+    color: white;
+}
+
+.card-header.bg-success {
+    background-color: var(--success-color) !important;
+}
+
+/* =========================
+   Boutons
+   ========================= */
+
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--accent-dark);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.35);
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+}
+
+.btn-success {
+    background-color: var(--success-color);
+}
+
+.btn-success:hover {
+    background-color: #229954;
+    transform: translateY(-1px);
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+    transform: translateY(-1px);
+}
+
+.btn-warning {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: #d68910;
+    color: white;
+}
+
+.btn-info {
+    background-color: #2980b9;
+    color: white;
+}
+
+.btn-info:hover {
+    background-color: #1f6391;
+    color: white;
+}
+
+.btn-group-sm {
+    gap: 4px;
+}
+
+/* =========================
+   Formulaires
+   ========================= */
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+    border: 1.5px solid #dde1e7;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    padding: 0.55rem 0.85rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(231, 76, 60, 0.2);
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+}
+
+/* =========================
+   Datepicker jQuery UI
+   ========================= */
+
+#datepicker {
+    background: white;
+    border: none;
+    border-radius: 10px;
+    width: 100% !important;
+}
+
+.ui-datepicker {
+    border-radius: 10px;
+    background: white;
+    border: none;
+    box-shadow: none;
+    width: 100% !important;
+    padding: 0.5rem;
+    font-family: inherit;
+}
+
+.ui-datepicker-header {
+    background: var(--accent-color);
+    color: white;
+    border-radius: 8px 8px 0 0;
+    border: none;
+    padding: 0.6rem 0;
+    font-weight: 600;
+}
+
+.ui-datepicker-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    top: 6px !important;
+    cursor: pointer;
+}
+
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover {
+    background: rgba(255,255,255,0.2) !important;
+    border: none !important;
+    border-radius: 4px !important;
+}
+
+.ui-datepicker thead th {
+    color: #888;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.4rem 0;
+}
+
+.ui-datepicker td {
+    padding: 2px;
+}
+
+.ui-datepicker td a,
+.ui-datepicker td span {
+    text-align: center;
+    border-radius: 6px;
+    padding: 0.35rem;
+    font-size: 0.9rem;
+    display: block;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+
+.ui-datepicker td a:hover {
+    background-color: #fde8e6;
+    color: var(--accent-color);
+}
+
+.ui-datepicker td.available-date a {
+    background-color: #efefef;
+    color: var(--accent-color);
+    font-weight: 700;
+    border: 1.5px solid var(--accent-color);
+}
+
+.ui-datepicker td.available-date a:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active {
+    background: var(--accent-color) !important;
+    color: white !important;
+    border-radius: 6px !important;
+    border: none !important;
+    font-weight: 700;
+}
+
+.ui-datepicker td.ui-datepicker-today a {
+    background-color: #fff3cd;
+    color: #856404;
+    font-weight: 700;
+}
+
+.ui-datepicker td.ui-state-disabled span {
+    color: #ccc;
+}
+
+/* =========================
+   Créneaux horaires
+   ========================= */
+
+.slots-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+@media (max-width: 400px) {
+    .slots-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.slot-button {
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.65rem 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    width: 100%;
+}
+
+.slot-button:hover {
+    border-color: var(--accent-color);
+    background-color: #fde8e6;
+    color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(231, 76, 60, 0.2);
+}
+
+.slot-button.active {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+    box-shadow: 0 3px 8px rgba(231, 76, 60, 0.35);
+    transform: translateY(-2px);
+}
+
+.slot-button .slot-time {
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: block;
+}
+
+.slot-button .slot-icon {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* =========================
+   Étapes de réservation
+   ========================= */
+
+.steps-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.step-number {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    background: #e9ecef;
+    color: #999;
+    transition: all 0.3s ease;
+}
+
+.step.active .step-number {
+    background: var(--accent-color);
+    color: white;
+    box-shadow: 0 3px 8px rgba(77, 60, 231, 0.3);
+}
+
+.step.done .step-number {
+    background: var(--success-color);
+    color: white;
+}
+
+.step-label {
+    font-size: 0.75rem;
+    color: #999;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.step.active .step-label {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.step.done .step-label {
+    color: var(--success-color);
+}
+
+.step-line {
+    flex: 1;
+    height: 2px;
+    background: #e9ecef;
+    min-width: 30px;
+    margin-bottom: 1.1rem;
+}
+
+.step-line.done {
+    background: var(--success-color);
+}
+
+/* =========================
+   Selected slot display
+   ========================= */
+
+.selected-slot-badge {
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+    color: white;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.selected-slot-badge i {
+    font-size: 1.4rem;
+}
+
+/* =========================
+   Alertes
+   ========================= */
+
+.alert {
+    border-radius: 8px;
+    border: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.alert-info {
+    background-color: #fde8e6;
+    color: var(--accent-dark);
+    border-left: 4px solid var(--accent-color);
+}
+
+/* =========================
+   Badges
+   ========================= */
+
+.badge {
+    border-radius: 6px;
+    padding: 0.4rem 0.65rem;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+/* =========================
+   Tableau
+   ========================= */
+
+.table {
+    color: var(--primary-color);
+}
+
+.table thead th {
+    background-color: #f4f6f9;
+    color: var(--primary-color);
+    font-weight: 600;
+    border: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    padding: 0.85rem 1rem;
+}
+
+.table tbody td {
+    padding: 0.85rem 1rem;
+    vertical-align: middle;
+    border-color: #f0f0f0;
+}
+
+.table tbody tr:hover {
+    background-color: #fde8e6;
+}
+
+/* =========================
+   Modal
+   ========================= */
+
+.modal-content {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 1.1rem 1.5rem;
+}
+
+.modal-footer {
+    border-top: 1px solid #f0f0f0;
+}
+
+/* =========================
+   Page d'accueil
+   ========================= */
+
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    padding: 4rem 0;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-logo {
+    max-width: 130px;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.feature-box {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 12px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.15);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   Pagination
+   ========================= */
+
+.pagination .page-link {
+    color: var(--accent-color);
+    border-color: #e9ecef;
+    border-radius: 6px !important;
+    margin: 0 2px;
+    font-weight: 500;
+}
+
+.pagination .page-link:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* =========================
+   Admin stats bar
+   ========================= */
+
+.stat-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.stat-icon.red    { background: #fde8e6; color: var(--accent-color); }
+.stat-icon.green  { background: #d4edda; color: var(--success-color); }
+.stat-icon.orange { background: #fff3cd; color: var(--warning-color); }
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 2.5rem 1rem;
+        border-radius: 8px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .table {
+        font-size: 0.82rem;
+    }
+
+    .table thead th,
+    .table tbody td {
+        padding: 0.65rem 0.6rem;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .btn-group .btn {
+        border-radius: 6px !important;
+    }
+
+    .steps-indicator {
+        gap: 0;
+    }
+
+    .step-label {
+        font-size: 0.65rem;
+    }
+
+    .step-line {
+        min-width: 15px;
+    }
+
+    main.container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .d-flex.gap-2 {
+        flex-direction: column;
+    }
+
+    .d-flex.justify-content-between {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: flex-start !important;
+    }
+}
+
+/* =========================
+   Animations
+   ========================= */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    animation: fadeIn 0.3s ease;
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    text-align: center;
+}

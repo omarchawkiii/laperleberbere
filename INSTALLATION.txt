@@ -1,0 +1,137 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                                                                               ║
+║                  LA PERLE BERBÈRE - GUIDE D'INSTALLATION                      ║
+║                   Système de gestion de rendez-vous                           ║
+║                                                                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+
+📍 ÉTAPE 1 : PRÉPARATION DES FICHIERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Les fichiers doivent être dans le dossier :
+  C:\laragon\www\laperleberbere\
+
+✓ Vérifier que le logo existent bien :
+  C:\laragon\www\laperleberbere\images\logo.jpg
+
+
+📍 ÉTAPE 2 : CRÉER LA BASE DE DONNÉES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Option A : Via phpMyAdmin (Recommandé)
+─────────────────────────────────────
+1. Ouvrir phpMyAdmin :
+   http://localhost/phpmyadmin
+
+2. Cliquer sur "Import" en haut
+
+3. Sélectionner le fichier :
+   setup.sql
+
+4. Cliquer sur "Exécuter"
+
+5. Attributions : ✓ La base de données est créée avec les tables et données test
+
+
+Option B : Via ligne de commande
+─────────────────────────────────
+1. Ouvrir PowerShell ou CMD
+
+2. Naviguer vers le dossier :
+   cd C:\laragon\www\laperleberbere
+
+3. Exécuter :
+   mysql -u root -p < setup.sql
+   (Appuyer sur OK si demande de mot de passe - pas de mot de passe sur Laragon)
+
+
+📍 ÉTAPE 3 : VÉRIFIER LA CONFIGURATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Éditer le fichier : config/db.php
+
+Vérifier ces paramètres :
+
+  define('DB_HOST', 'localhost');           ← Hôte (localhost par défaut)
+  define('DB_USER', 'root');                ← Utilisateur MySQL
+  define('DB_PASSWORD', '');                ← Mot de passe (vide sur Laragon)
+  define('DB_NAME', 'laperleberbere');      ← Nom de la base
+
+⚠️ Si vous utiliser XAMPP ou autre, adapter les paramètres !
+
+
+📍 ÉTAPE 4 : LANCER L'APPLICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Accèder aux URLs suivantes dans votre navigateur :
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                                                                     │
+│  🏠 PAGE D'ACCUEIL (Homebase)                                       │
+│  http://localhost/laperleberbere/                                   │
+│                                                                     │
+│  👤 PRISE DE RENDEZ-VOUS (Client)                                   │
+│  http://localhost/laperleberbere/client/                            │
+│                                                                     │
+│  👨‍💼 ESPACE ADMINISTRATEUR                                            │
+│  http://localhost/laperleberbere/admin/                             │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+
+🎉 INSTALLATION COMPLÈTE !
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+📖 PREMIÈRES UTILISATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ACCÈS CLIENT :
+   • Vous verrez un calendrier avec dates disponibles (avril 2026 test)
+   • Sélectionnez une date et un créneau
+   • Remplissez le formulaire
+   • Confirmez votre rendez-vous
+
+2. ACCÈS ADMIN :
+   • Vous verrez tous les rendez-vous
+   • Validez, supprimez ou libérez des rendez-vous
+   • Allez à "Créneaux" pour ajouter de nouvelles disponibilités
+   • Ajoutez des dates et heures
+
+
+⚠️ NOTES IMPORTANTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ La base de données inclut des créneaux de test pour avril 2026
+✓ Tous les textes et formulaires sont en français
+✓ L'application est 100% responsive (mobile, tablette, desktop)
+✓ Les validations fonctionnent côté client ET serveur
+
+
+📚 DOCUMENTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Consulter le fichier README.md pour une documentation complète.
+
+
+📞 EN CAS D'ERREUR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ "Erreur de connexion à la base de données"
+   → Vérifier les identifiants dans config/db.php
+
+❌ "Aucun créneau disponible"
+   → Ajouter des créneaux via Admin > Créneaux
+
+❌ "Logo non visible"
+   → Placer logo.jpg dans le dossier /images
+
+❌ Page blanche
+   → Vérifier que PHP est activé et la syntaxe est correcte
+   → Consulter le journal d'erreurs du serveur
+
+
+═══════════════════════════════════════════════════════════════════════════════
+Merci d'utiliser LA PERLE BERBÈRE ! 🎉
+═══════════════════════════════════════════════════════════════════════════════
