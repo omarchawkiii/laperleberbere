@@ -6,6 +6,7 @@
 
 header('Content-Type: application/json');
 require_once '../config/db.php';
+require_once '../config/mail.php';
 
 $action = $_POST['action'] ?? '';
 $response = ['success' => false, 'message' => 'Erreur'];
@@ -76,7 +77,18 @@ try {
             $stmt = $pdo->prepare('UPDATE disponibilites SET statut = ? WHERE id = ?');
             $stmt->execute(['réservé', $slot_id]);
 
+            // Récupérer la date et heure du créneau pour l'email
+            $stmt = $pdo->prepare('SELECT date, heure FROM disponibilites WHERE id = ?');
+            $stmt->execute([$slot_id]);
+            $slot_info = $stmt->fetch();
+
             $pdo->commit();
+
+            // Envoyer la notification email à l'admin
+            send_booking_notification(
+                ['prenom' => $prenom, 'nom' => $nom, 'email' => $email, 'telephone' => $telephone, 'raison' => $raison],
+                $slot_info
+            );
 
             $response['success'] = true;
             $response['message'] = 'Rendez-vous confirmé!';

@@ -4,6 +4,10 @@
  * LA PERLE BERBÈRE - Gestion de Rendez-vous
  */
 
+// TODO DEBUG — retirer après correction
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 // Paramètres de connexion
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
