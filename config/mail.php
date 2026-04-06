@@ -9,17 +9,17 @@
  */
 
 // ── Email de l'administrateur (destinataire des notifications) ──
-define('MAIL_ADMIN',     'momoh@gmail.com');
+define('MAIL_ADMIN',     'email@gmail.com');
 
 // ── Expéditeur affiché dans les emails ──
-define('MAIL_FROM',      'arezki.mohamed@omodiz.com');
+define('MAIL_FROM',      'email@gmail.com');
 define('MAIL_FROM_NAME', 'LA PERLE BERBÈRE');
 
 // ── SMTP ────────────────────────────────────────────────────────
 define('MAIL_USE_SMTP',  true);
 define('MAIL_SMTP_HOST', 'mail.omodiz.com');
 define('MAIL_SMTP_PORT', 465);
-define('MAIL_SMTP_USER', 'arezki.mohamed@omodiz.com');
+define('MAIL_SMTP_USER', 'email@gmail.com');
 define('MAIL_SMTP_PASS', 'Utilisez le mot de passe du compte de messagerie.');  // ← remplacez par votre vrai mot de passe
 define('MAIL_SMTP_TLS',  false);              // false = SSL direct (port 465)
 

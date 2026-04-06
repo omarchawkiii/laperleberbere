@@ -168,11 +168,14 @@ $available_dates = array_keys($slotsByDate);
                                            placeholder="Ait Larbi" required>
                                 </div>
                                 <div class="col-12">
-                                    <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                    <label for="email" class="form-label">
+                                        Email
+                                        <span class="text-muted fw-normal">(optionnel)</span>
+                                    </label>
                                     <div class="input-group">
-                                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                        <span class="input-group-text" style="background-color: var(--accent-color); color: white; border-color: var(--accent-color);"><i class="bi bi-envelope"></i></span>
                                         <input type="email" class="form-control" id="email" name="email"
-                                               placeholder="Email@email.com" required>
+                                               placeholder="Email@email.com">
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -230,6 +233,17 @@ $available_dates = array_keys($slotsByDate);
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        <div class="container py-4">
+            <p class="mb-0"><strong>LA PERLE BERBÈRE</strong> &copy; <?= date('Y') ?></p>
+            <small>Système de gestion de rendez-vous - Tous droits réservés</small>
+            <div class="mt-2">
+                <small>Réalisation <a href="https://omodiz.com" target="_blank" rel="" style="color: white; text-decoration: none; font-weight: 600;">Omodiz</a></small>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>

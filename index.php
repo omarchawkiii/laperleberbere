@@ -113,6 +113,9 @@
         <div class="container py-4">
             <p class="mb-0"><strong>LA PERLE BERBÈRE</strong> &copy; <?= date('Y') ?></p>
             <small>Système de gestion de rendez-vous - Tous droits réservés</small>
+            <div class="mt-2">
+                <small>Réalisation <a href="https://omodiz.com" target="_blank" rel="" style="color: white; text-decoration: none; font-weight: 600;">Omodiz</a></small>
+            </div>
         </div>
     </footer>
 

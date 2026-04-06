@@ -30,9 +30,7 @@ try {
         if (empty($nom)) {
             $errors[] = 'Le nom est obligatoire';
         }
-        if (empty($email)) {
-            $errors[] = 'L\'email est obligatoire';
-        } elseif (!validate_email($email)) {
+        if (!empty($email) && !validate_email($email)) {
             $errors[] = 'L\'email n\'est pas valide';
         }
         if (empty($telephone)) {

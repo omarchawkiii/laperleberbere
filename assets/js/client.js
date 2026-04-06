@@ -33,9 +33,7 @@ function validateForm() {
     if (!nom) {
         errors.push('Le nom est obligatoire');
     }
-    if (!email) {
-        errors.push('L\'email est obligatoire');
-    } else if (!isValidEmail(email)) {
+    if (email && !isValidEmail(email)) {
         errors.push('L\'email n\'est pas valide');
     }
     if (!telephone) {
